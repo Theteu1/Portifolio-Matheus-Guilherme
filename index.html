@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Guilherme — Desenvolvedor Full Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <header class="wrap">
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Skills</a>
+      </div>
+      <a href="#home" class="logo"><span class="logo-mark">MG</span>Matheus Guilherme</a>
+      <div class="nav-links">
+        <a href="#trajetoria">Trajetória</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu">&#9776;</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#skills">Skills</a>
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </header>
+
+  <script>
+    var burgerBtn = document.getElementById('burgerBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    burgerBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { mobileMenu.classList.remove('open'); });
+    });
+  </script>
+
+  <!-- HERO -->
+  <section class="hero wrap" id="home">
+    <div class="hello-badge">
+      <span>Olá!</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 20 L14 4 M14 4 L10 6 M14 4 L16 9" />
+      </svg>
+    </div>
+    <h1>Sou <span class="accent">Matheus,</span></h1>
+    <div class="role">Desenvolvedor Full Stack</div>
+
+    <div class="hero-stage">
+      <div class="hero-visual">
+        <div class="hero-blob"></div>
+
+        <div class="hero-photo">
+          <img src="matheus-foto.png" alt="Foto de Matheus Guilherme">
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projetos" class="btn btn-solid">Projetos ↗</a>
+          <a href="#contato" class="btn btn-outline">Contato</a>
+        </div>
+      </div>
+
+      <div class="hero-side hero-quote">
+        <svg viewBox="0 0 32 24" fill="currentColor">
+          <path
+            d="M0 24V14.9C0 9.7 1.4 5.9 4.2 3.4 7 0.9 10.4 -0.2 14.4 0.1V5.8C12 5.6 10.1 6.1 8.6 7.4 7.2 8.6 6.4 10.4 6.2 12.6H14.4V24H0ZM17.6 24V14.9C17.6 9.7 19 5.9 21.8 3.4 24.6 0.9 28 -0.2 32 0.1V5.8C29.6 5.6 27.7 6.1 26.2 7.4 24.8 8.6 24 10.4 23.8 12.6H32V24H17.6Z" />
+        </svg>
+        <p>Foco em Backend com Java — ampliando conhecimentos técnicos e construindo soluções eficientes e escaláveis.
+        </p>
+      </div>
+
+      <div class="hero-side hero-stats">
+        <div class="years" style="font-size:20px;">Em formação contínua</div>
+        <div class="exp">Transforme-se, bootcamps e ideathons<br>— veja mais abaixo ↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="wrap" id="skills">
+    <div class="skills">
+      <div class="skills-head">
+        <h2>Minhas <span class="accent">Skills</span></h2>
+        <p>Tecnologia com base em ADS (Unit) e vivência prática em projetos reais pela Residência Onboard (Porto
+          Digital).</p>
+      </div>
+      <div class="skill-categories">
+        <div class="skill-cat">
+          <h3>Linguagens</h3>
+          <div class="chip-row">
+            <span class="chip primary">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">SQL</span>
+            <span class="chip">PHP</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Frameworks &amp; Bibliotecas</h3>
+          <div class="chip-row">
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Flask</span>
+            <span class="chip">Angular</span>
+            <span class="chip">NestJS</span>
+            <span class="chip">React</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Banco de Dados</h3>
+          <div class="chip-row">
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Prisma ORM</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Plataformas</h3>
+          <div class="chip-row">
+            <span class="chip">ServiceNow</span>
+            <span class="chip">TOTVS</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3>Ferramentas</h3>
+          <div class="chip-row">
+            <span class="chip">Power BI</span>
+            <span class="chip">Pacote Office</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAJETORIA -->
+  <section class="wrap section-pad" id="trajetoria">
+    <h2 class="section-title">Minha <span class="accent">Trajetória</span></h2>
+    <p class="traj-intro">Venho de uma família simples e sempre fui uma criança curiosa, do tipo que gosta de resolver
+      as coisas por conta própria — desde cedo já ajudava família e amigos com problema de celular, computador, TV,
+      jogos e por aí vai.</p>
+    <div class="exp-grid">
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Senai — Assistente Administrativo</h3>
+          <div class="role">Curso técnico · ~2 meses</div>
+        </div>
+      </div>
+      <div class="exp-dot"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>Primeiro contato mais forte com tecnologia, através do Pacote Office. Queria entrar direto em TI, mas a
+            oportunidade que apareceu foi na área administrativa.</p>
+        </div>
+      </div>
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Senai — Técnico em Administração</h3>
+          <div class="role">Curso técnico · ~2 anos</div>
+        </div>
+      </div>
+      <div class="exp-dot"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>Na sequência, entrei no técnico em Administração do Senai — curso mais longo, que segui em paralelo com o
+            restante da trajetória.</p>
+        </div>
+      </div>
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Jovem Aprendiz — Perfil Plast</h3>
+          <div class="role">Contratado via Senai · Setor Financeiro</div>
+        </div>
+      </div>
+      <div class="exp-dot"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>Cerca de 2 meses depois de começar o técnico, consegui uma vaga de Jovem Aprendiz pelo Senai, contratado
+            pela Perfil Plast. Rotinas do financeiro (inadimplência inclusa), apoio ao almoxarifado e à equipe de TI —
+            cheguei a montar uma planilha em Excel/VBA pra mapear computadores e patrimônio. Também apoiei workshops de
+            realidade aumentada.</p>
+        </div>
+      </div>
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Embarque Digital + Unit — ADS</h3>
+          <div class="role">Análise e Desenvolvimento de Sistemas</div>
+        </div>
+      </div>
+      <div class="exp-dot"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>O Embarque Digital me possibilitou cursar ADS pela Unit. Nesse período, fiz a Residência Onboard — projeto
+            semestral do Porto Digital — onde atuei em squad com demandas reais de empresas: Even3, UStore e VoltzX.</p>
+        </div>
+      </div>
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Abacus</h3>
+          <div class="role">Projeto pessoal</div>
+        </div>
+      </div>
+      <div class="exp-dot"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>App em Java para contagem e controle de inventário, com as funcionalidades da operação e melhorias que fui
+            incorporando pelo caminho.</p>
+        </div>
+      </div>
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Transforme-se</h3>
+          <div class="role">Serasa Experian + Senac</div>
+        </div>
+      </div>
+      <div class="exp-dot"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>Depois de formado, enquanto buscava a primeira oportunidade na área: programa de desenvolvimento Frontend
+            com uma unidade de gestão financeira.</p>
+        </div>
+      </div>
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Capacitação contínua</h3>
+          <div class="role">Bootcamps</div>
+        </div>
+      </div>
+      <div class="exp-dot"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>Bootcamp DIO + Santander (Java e Spring Boot) e um curso focado em Spring Boot e Angular.</p>
+        </div>
+      </div>
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Bootcamp Deloitte</h3>
+          <div class="role">ServiceNow</div>
+        </div>
+      </div>
+      <div class="exp-dot"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>Trilha presencial na plataforma ServiceNow, com projetos práticos de automação de processos.</p>
+        </div>
+      </div>
+      <div class="exp-left">
+        <div class="exp-item">
+          <h3>Projetos recentes</h3>
+          <div class="role">StudyWell · Ideathon</div>
+        </div>
+      </div>
+      <div class="exp-dot mid"><i></i></div>
+      <div class="exp-right">
+        <div class="exp-item">
+          <p>StudyWell (análise preditiva em Python) e o Ideathon Senac + UPE, com uma proposta de prontuário digital
+            hospitalar.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3>Universidade Tiradentes (Unit)</h3>
+        <div class="role">Análise e Desenvolvimento de Sistemas — Embarque Digital</div>
+        <div class="when">2023 – 2025</div>
+      </div>
+      <div class="edu-card">
+        <h3>Senai</h3>
+        <div class="role">Técnico em Administração</div>
+        <div class="when">2023 – 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MIM -->
+  <section class="wrap" id="sobre">
+    <div class="about-block">
+      <div class="about-grid">
+        <div class="about-photos">
+          <img class="p1" src="sobre-foto-2.jpg" alt="Matheus com coroa falando ao microfone em evento">
+          <img class="p2" src="sobre-foto-1.jpg" alt="Matheus apresentando um projeto de código">
+        </div>
+        <div class="about-copy">
+          <h2>Sobre <span class="accent">mim</span></h2>
+          <p>Curioso desde pequeno — sempre fui aquele que queria entender como as coisas funcionavam por trás da tela.
+            Hoje tento unir essa curiosidade com organização e planejamento no dia a dia, sem perder o lado
+            extrovertido, mesmo sendo mais tímido quando o assunto é falar em público. Penso rápido e às vezes pareço
+            distraído — mas é porque a cabeça já está em três lugares ao mesmo tempo. No momento, estou em busca da
+            minha primeira oportunidade no mercado, pronto para colocar tudo isso em prática.</p>
+          <div class="about-stats">
+            <div class="about-stat"><b>1º</b><span>Da família a se formar na faculdade</span></div>
+            <div class="about-stat"><b>3</b><span>Projetos na Residência</span></div>
+            <div class="about-stat"><b>4+</b><span>Bootcamps e imersões</span></div>
+            <a href="#contato" class="btn btn-outline">Fale comigo</a>
+          </div>
+          <div class="soft-skills">
+            <span>Comunicação assertiva</span>
+            <span>Proatividade</span>
+            <span>Trabalho em equipe</span>
+            <span>Aprendizado contínuo</span>
+            <span>Resolução de problemas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="wrap section-pad" id="projetos">
+    <div class="portfolio-head">
+      <h2>Meus <span class="accent">Projetos</span></h2>
+      <!-- <a href="#" class="btn btn-solid">Ver todos</a> -->
+    </div>
+    <p class="portfolio-note">3 projetos da Residência Onboard (Porto Digital), além de projetos pessoais e acadêmicos.
+    </p>
+    <div class="portfolio-strip">
+      <div class="pcard proj-card" style="min-width:320px;">
+        <div class="top"><span>Residência · IA</span></div>
+        <div>
+          <h4>Even3 — Transcrição de Palestras</h4>
+          <p>IA para transcrever palestras e eventos da plataforma Even3.</p>
+        </div>
+        <div class="stack">
+          <span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span><span>Node.js</span><span>AssemblyAI</span><span>MySQL</span>
+        </div>
+      </div>
+      <div class="pcard proj-card" style="min-width:320px;">
+        <div class="top"><span>Residência · Front-end</span></div>
+        <div>
+          <h4>UStore — Biblioteca de Componentes</h4>
+          <p>Componentes reutilizáveis para agilizar o time de front-end da UStore.</p>
+        </div>
+        <div class="stack"><span>Angular</span><span>TypeScript</span><span>HTML</span><span>CSS</span></div>
+      </div>
+      <div class="pcard proj-card" style="min-width:320px;">
+        <div class="top"><span>Residência · Full-stack</span></div>
+        <div>
+          <h4>VoltzX — Energias Renováveis</h4>
+          <p>MVP conectando terrenos, empresas de energia solar e investidores.</p>
+        </div>
+        <div class="stack"><span>React</span><span>React
+            Query</span><span>ShadCN</span><span>Node.js</span><span>Prisma</span><span>PostgreSQL</span></div>
+      </div>
+      <div class="pcard proj-card" style="min-width:320px;">
+        <div class="top"><span>Projeto pessoal</span></div>
+        <div>
+          <h4>Abacus</h4>
+          <p>App em Java para contagem e controle de inventário, com as funcionalidades principais da operação e
+            recursos extras conforme necessidades identificadas ao longo do projeto.</p>
+        </div>
+        <div class="stack"><span>Java</span></div>
+      </div>
+      <div class="pcard proj-card" style="min-width:320px;">
+        <div class="top"><span>Acadêmico · Machine Learning</span></div>
+        <div>
+          <h4>StudyWell</h4>
+          <p>Análise preditiva em Python para estimar, a partir de um questionário, a probabilidade de indicadores
+            relacionados à depressão — sem caráter de diagnóstico médico.</p>
+        </div>
+        <div class="stack"><span>Python</span><span>Machine Learning</span></div>
+      </div>
+    </div>
+
+    <div class="tag-row" id="tag-row">
+      <span class="tag-pill on" data-title="Even3 — Transcrição de Palestras com IA"
+        data-desc="Proposta: desenvolver uma IA para transcrição automática de palestras e eventos na plataforma Even3. Solução: front-end em HTML, CSS e JavaScript; back-end modular em PHP com suporte a Node.js; integração com a API AssemblyAI para transcrição; banco de dados MySQL.">Even3</span>
+      <span class="tag-pill" data-title="UStore — Biblioteca de Componentes"
+        data-desc="Proposta: criar uma biblioteca de componentes para otimizar o trabalho do time de front-end da UStore, reduzindo o tempo de desenvolvimento. Solução: Angular, TypeScript, HTML e CSS.">UStore</span>
+      <span class="tag-pill" data-title="VoltzX — Energias Renováveis"
+        data-desc="Proposta: MVP conectando proprietários de terrenos, empresas de energia solar e investidores para viabilizar projetos sustentáveis. Solução: front-end em React, React Query e ShadCN; back-end em Node.js com Prisma ORM; banco de dados PostgreSQL.">VoltzX</span>
+      <span class="tag-pill" data-title="Abacus — Contagem de Inventário"
+        data-desc="App em Java para contagem e controle de inventário, com as funcionalidades principais da operação e recursos extras conforme necessidades identificadas ao longo do projeto.">Abacus</span>
+      <span class="tag-pill" data-title="StudyWell — Análise Preditiva"
+        data-desc="Análise preditiva em Python para estimar, a partir de um questionário, a probabilidade de indicadores relacionados à depressão — sem caráter de diagnóstico médico.">StudyWell</span>
+    </div>
+
+    <div class="project-detail">
+      <h3><span id="proj-title">Even3 — Transcrição de Palestras com IA</span> <span class="go">↗</span></h3>
+      <p id="proj-desc">Proposta: desenvolver uma IA para transcrição automática de palestras e eventos na plataforma
+        Even3. Solução: front-end em HTML, CSS e JavaScript; back-end modular em PHP com suporte a Node.js; integração
+        com a API AssemblyAI para transcrição; banco de dados MySQL.</p>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#tag-row .tag-pill').forEach(function (pill) {
+      pill.style.cursor = 'pointer';
+      pill.addEventListener('click', function () {
+        document.querySelectorAll('#tag-row .tag-pill').forEach(function (p) { p.classList.remove('on'); });
+        pill.classList.add('on');
+        document.getElementById('proj-title').textContent = pill.dataset.title;
+        document.getElementById('proj-desc').textContent = pill.dataset.desc;
+      });
+    });
+  </script>
+
+  <!-- CERTIFICAÇÕES & CONQUISTAS -->
+  <section class="wrap" id="certificados">
+    <div class="certifications">
+      <div class="skills-head">
+        <h2>Certificações &amp; <span class="accent">Conquistas</span></h2>
+        <p>Trilhas, bootcamps e reconhecimentos ao longo da formação e da atuação prática em projetos reais.</p>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-media ph">Imagem do certificado</div>
+          <div class="cert-top-row">
+            <h3>Bootcamp Deloitte — ServiceNow</h3>
+            <span class="cert-pending">Vou anexar</span>
+          </div>
+          <p>Trilha presencial na plataforma ServiceNow, com projetos práticos de automação de processos.</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-media ph">Imagem do certificado</div>
+          <div class="cert-top-row">
+            <h3>Bootcamp Santander + DIO</h3>
+            <span class="cert-pending">Vou anexar</span>
+          </div>
+          <p>Imersão em Java e Spring Boot, com certificação Santander via plataforma DIO.</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-media ph">Imagem do certificado</div>
+          <div class="cert-top-row">
+            <h3>Residência Onboard — Porto Digital</h3>
+            <span class="cert-pending">Vou anexar</span>
+          </div>
+          <p>Projeto semestral com demandas reais de empresas: Even3, UStore e VoltzX, atuando em squad.</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-media ph">Imagem do certificado</div>
+          <div class="cert-top-row">
+            <h3>Ideathon Senac + UPE</h3>
+            <span class="cert-pending">Vou anexar</span>
+          </div>
+          <p>Proposta de prontuário digital unificando sistemas dos três hospitais centrais da UPA de Recife. 5º lugar
+            geral.</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-media ph">Imagem do certificado</div>
+          <div class="cert-top-row">
+            <h3>Transforme-se — Serasa Experian</h3>
+            <span class="cert-pending">Vou anexar</span>
+          </div>
+          <p>Programa de desenvolvimento Frontend em parceria com o Senac, com foco em prática de mercado. Em andamento.
+          </p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-media ph">Imagem do certificado</div>
+          <div class="cert-top-row">
+            <h3>Java Completo — POO</h3>
+            <span class="cert-pending">Vou anexar</span>
+          </div>
+          <p>Curso aprofundado em Programação Orientada a Objetos: classes, herança, polimorfismo e boas práticas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="wrap cta" id="contato">
+    <h2>Tem uma oportunidade ou projeto<br>em mente? <span class="accent">Vamos conversar</span></h2>
+    <a href="mailto:matheus125gui@gmail.com" class="cta-form" style="text-decoration:none;">
+      <div class="mail-ic">✉</div>
+      <span style="flex:1;color:var(--gray);font-size:15px;">matheus125gui@gmail.com</span>
+      <span class="btn btn-solid">Enviar e-mail</span>
+    </a>
+    <div class="cta-meta">
+      <span>📍 Recife, PE</span>
+      <span>💼 Em busca da minha primeira oportunidade no mercado</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span>Java <i></i> Spring Boot <i></i> Python <i></i> JavaScript <i></i> TypeScript <i></i> SQL <i></i></span>
+      <span>Java <i></i> Spring Boot <i></i> Python <i></i> JavaScript <i></i> TypeScript <i></i> SQL <i></i></span>
+    </div>
+  </div>
+
+  <!-- FORMACAO E EXPERIENCIAS -->
+  <section class="wrap section-pad">
+    <div class="blog-head">
+      <h2>Formação &amp; <span class="accent">Experiências</span></h2>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="shot ph">Deloitte</div>
+        <span class="cat">Bootcamp presencial · 2026</span>
+        <h3>Bootcamp Deloitte — ServiceNow</h3>
+        <p>Trilha presencial na plataforma ServiceNow, com projetos práticos de automação de processos.</p>
+      </article>
+      <article class="blog-card">
+        <div class="shot ph">Santander</div>
+        <span class="cat">Bootcamp online · 2026</span>
+        <h3>Bootcamp Santander — Spring Boot e Java</h3>
+        <p>Imersão focada em Java e Spring Boot, com certificação Santander via DIO.</p>
+      </article>
+      <article class="blog-card">
+        <div class="shot ph">Transforme-se</div>
+        <span class="cat">Serasa Experian · Atual</span>
+        <h3>Programa Transforme-se — Frontend</h3>
+        <p>Programa de desenvolvimento frontend do Serasa, em andamento.</p>
+      </article>
+      <article class="blog-card">
+        <div class="shot ph">Java</div>
+        <span class="cat">Curso complementar</span>
+        <h3>Java Completo — Programação Orientada a Objetos</h3>
+        <p>Curso aprofundado em POO com Java: classes, herança, polimorfismo e boas práticas.</p>
+      </article>
+      <article class="blog-card">
+        <div class="shot ph">Spring</div>
+        <span class="cat">Em andamento</span>
+        <h3>Spring Boot e Angular</h3>
+        <p>Curso atual, aplicando essas tecnologias na prática após consolidar a linguagem Java.</p>
+      </article>
+      <article class="blog-card">
+        <div class="shot ph">Ideaton</div>
+        <span class="cat">Senac + UPE · 5º lugar</span>
+        <h3>Ideaton de Saúde</h3>
+        <p>Projeto de unificação de prontuários e sistemas dos três hospitais centrais da UPA de Recife.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <h2>Vamos nos conectar</h2>
+      <a href="#contato" class="btn btn-solid">Fale comigo ↗</a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="#home" class="logo"><span class="logo-mark">MG</span>Matheus Guilherme</a>
+        <p>Desenvolvedor Full Stack em formação, com trânsito por administração e TI. Sempre buscando aprender e
+          construir soluções que fazem sentido.</p>
+        <div class="socials">
+          <a href="https://linkedin.com/in/matheus-guilherme4" title="LinkedIn">in</a>
+          <a href="#" title="GitHub">GH</a>
+          <a href="mailto:matheus125gui@gmail.com" title="E-mail">@</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li>Home</li>
+          <li>Sobre</li>
+          <li>Skills</li>
+          <li>Projetos</li>
+          <li>Contato</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li>matheus125gui@gmail.com</li>
+          <li>linkedin.com/in/matheus-guilherme4</li>
+          <li>github.com/seu-usuario</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Currículo</h4>
+        <div class="cv-box">
+          <p>Baixe uma versão em PDF do meu currículo.</p>
+          <!-- Coloque o arquivo do currículo na mesma pasta do index.html e ajuste o nome abaixo -->
+          <a href="curriculo-matheus.pdf" download="Matheus-Guilherme-CV.pdf" class="btn btn-solid"
+            style="padding:10px 20px;font-size:13px;">Baixar PDF</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright© 2026 Matheus Guilherme. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+</body>
+
+</html>
